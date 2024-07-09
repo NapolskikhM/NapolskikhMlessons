@@ -1,6 +1,10 @@
 class Animal:
 
-    def __init__(self, name, alive=True, fed=False):
+    name = None
+    alive = True
+    fed = False
+
+    def __init__(self, name, alive, fed):
         self.name = name
         self.alive = alive
         self.fed = fed
@@ -8,15 +12,21 @@ class Animal:
 
 class Plant:
 
+    name = None
+    edible = False
+
     def __init__(self, name, edible):
         self.name = name
-        self.edible = False
+        self.edible = edible
 
 
 class Mammal(Animal):
 
     def __init__(self, name, alive=True, fed=False):
         super().__init__(name, alive, fed)
+        self.name = name
+        self.alive = alive
+        self.fed = fed
 
     def eat(self, food):
         if food.edible:
@@ -31,6 +41,9 @@ class Predator(Animal):
 
     def __init__(self, name, alive=True, fed=False):
         super().__init__(name, alive, fed)
+        self.name = name
+        self.alive = alive
+        self.fed = fed
 
     def eat(self, food):
         if food.edible:
