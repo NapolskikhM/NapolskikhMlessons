@@ -24,9 +24,6 @@ class Mammal(Animal):
 
     def __init__(self, name, alive=True, fed=False):
         super().__init__(name, alive, fed)
-        self.name = name
-        self.alive = alive
-        self.fed = fed
 
     def eat(self, food):
         if food.edible:
@@ -41,9 +38,6 @@ class Predator(Animal):
 
     def __init__(self, name, alive=True, fed=False):
         super().__init__(name, alive, fed)
-        self.name = name
-        self.alive = alive
-        self.fed = fed
 
     def eat(self, food):
         if food.edible:
@@ -58,16 +52,12 @@ class Flower(Plant):
 
     def __init__(self, name, edible=False):
         super().__init__(name, edible)
-        self.name = name
-        self.edible = edible
 
 
 class Fruit(Plant):
 
     def __init__(self, name, edible=True):
         super().__init__(name, edible)
-        self.name = name
-        self.edible = edible
 
 
 # Проверочный код
