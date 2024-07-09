@@ -8,9 +8,6 @@ class Vehicle:
         self.__engine_power = __engine_power
         self.__color = __color
 
-    '''def __str__(self):
-        return self'''
-
     def  get_model(self, __model):
         return f'Модель: {self.__model}'
 
