@@ -11,7 +11,7 @@ import crud_functions
 
 products_ = crud_functions.get_all_products()
 
-api = '7868708690:AAGI9j9wRjqwJBsb-ElJlQKZfnqMaYwuE4Y'
+api = ''
 bot = Bot(token=api)
 dp = Dispatcher(bot, storage=MemoryStorage())
 
@@ -126,6 +126,7 @@ async def get_buying_list(message):
                                   f'| Описание: {products_[i][2]} | Цена: {products_[i][3]}')
         with open(f'file{i}.jpg', 'rb') as img:
             await message.answer_photo(img)
+    #вывод меню покупки
     await message.answer(text='Выберите продукт для покупки:', reply_markup=InlineKeyboardMarkup_1)
 
 
